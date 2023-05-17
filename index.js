@@ -2,7 +2,7 @@ const { Server } = require("socket.io");
 
 const io = new Server({
     cors: {
-        origin: "http://localhost:9000"
+        origin: ["http://localhost:9000", "https://virtu-cardgame.vercel.app/"]
     }
 });
 let users = [];
@@ -83,4 +83,4 @@ io.on("connection", (socket) => {
     })
 });
 
-io.listen(3000);
+io.listen(8080);
